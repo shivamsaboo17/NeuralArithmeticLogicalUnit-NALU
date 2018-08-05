@@ -21,3 +21,17 @@ The sigmoid from G_OUT gave us probability of additive gate hence we subtract it
 #### FINAL OUTPUT = MULTIPLICATIVE_OUT + ADDITIVE_OUT
 ### Model Illustration:
 ![](https://github.com/kevinzakka/NALU-pytorch/blob/master/imgs/arch.png)
+### Usage:
+Import the files.</br>
+```
+from nac import NAC
+from nalu import NALU
+```
+#### NAC
+```
+net = NAC(*dims) # Creates a feed forward NAC network with dimensions given
+```
+#### NALU
+```
+net = NALU(*dims) # Created a feed forward NALU network with dimensions given
+```
