@@ -43,7 +43,7 @@ class NALU(nn.Module):
         layers = []
 
         for i in range(len(dims) - 1):
-            layers += [NeuralArithmeticLogicUnit(dims[i+1], dims[i])]
+            layers += [NeuralArithmeticLogicUnit(dims[i], dims[i + 1])]
         
         self.model = nn.Sequential(*layers)
 

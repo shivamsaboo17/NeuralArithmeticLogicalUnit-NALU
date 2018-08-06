@@ -36,7 +36,7 @@ class NAC(nn.Module):
 
         layers = []
         for i in range(len(dims) - 1):
-            layers += [NeuralAccumulatorCell(dims[i + 1], dims[i])]
+            layers += [NeuralAccumulatorCell(dims[i], dims[i+1])]
         self.model = nn.Sequential(*layers)
     
     def forward(self, input):
