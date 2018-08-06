@@ -45,5 +45,5 @@ from create_conv_head import BuildHead
 # num_output -> number of classes for classfication and 1 for regression
 # head_type -> NAC / NALU
 final_md = BuildHead(conv_model, op_channel, hidden_dims, task, num_outputs, head_type)
-# For supporting dynamic image sizes, an adaptive module is added at end of CNN. Will soon add feature to disable it.
+# For supporting dynamic image sizes, an adaptive module is added at end of CNN. Will soon add feature to disable it
 ```
