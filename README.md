@@ -35,3 +35,15 @@ net = NAC(*dims) # Creates a feed forward NAC network with dimensions given
 ```python
 net = NALU(*dims) # Created a feed forward NALU network with dimensions given
 ```
+#### Adding NALU and NAC head to your custom CNN backbone
+```python
+from create_conv_head import BuildHead
+# conv_model -> Your custom CNN
+# op_channel -> Number of output channels of your CNN
+# hidden_dims -> Dimensions of NALU/NAC network
+# task -> classification / regression
+# num_output -> number of classes for classfication and 1 for regression
+# head_type -> NAC / NALU
+final_md = BuildHead(conv_model, op_channel, hidden_dims, task, num_outputs, head_type)
+# For supporting dynamic image sizes, an adaptive module is added at end of CNN. Will soon add feature to disable it.
+```
